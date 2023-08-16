@@ -5,9 +5,7 @@ export function CardTitle(props: any) {
 }
 
 export function Details(props: any) {
-  return (
-    <p className="text-base font-medium text-gray-500">{props.children}</p>
-  );
+  return <p className="text-lg font-bold text-black">{props.children}</p>;
 }
 
 export function BodyText(props: any) {
