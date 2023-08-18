@@ -9,9 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className=" flex justify-center w-screen h-screen p-8 bg-gradient-to-r from-[#9C1B20] via-[#B6202B] to-[#CD3439]">
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full max-w-[1440px]">
-        {/* Row 1*/}
-
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full max-w-[1440px] max-h-screen">
         {/* Greeting Card */}
 
         <div className="lg:col-span-2 bg-white rounded-3xl p-10 flex lg:flex-row flex-col-reverse lg:justify-end ">
@@ -40,7 +38,7 @@ export default function Home() {
         {/* About Card */}
 
         <Link
-          className="bg-[url('/aboutImage.png')] bg-cover bg-center p-4 rounded-3xl flex flex-col hover:opacity-75"
+          className="bg-[url('/aboutImage.png')] bg-cover bg-center p-4 rounded-3xl flex flex-col hover:opacity-75 "
           href="/about"
         >
           <div className="mt-auto">
@@ -54,7 +52,7 @@ export default function Home() {
         {/* Portfolio Card */}
         <Link
           href="/portfolio"
-          className="bg-[url('/portfolioImage.png')] lg:col-span-2 p-4 rounded-3xl flex flex-col bg-cover bg-center hover:opacity-75"
+          className="bg-[url('/portfolioImage.png')] lg:col-span-2 p-4 rounded-3xl flex flex-col bg-cover bg-center hover:opacity-75  max-h-[456px]"
         >
           <div className="mt-auto">
             <CardTitle>Portfolio</CardTitle>
@@ -65,7 +63,7 @@ export default function Home() {
         {/* Contact Card */}
         <Link
           href="/contact"
-          className="bg-[url('/contactImage.png')]  bg-cover bg-center p-4 rounded-3xl flex flex-col hover:opacity-75"
+          className="bg-[url('/contactImage.png')]  bg-cover bg-center p-4 rounded-3xl flex flex-col hover:opacity-75 max-h-[456px]"
         >
           <div className="mt-auto">
             <CardTitle>Contact</CardTitle>
