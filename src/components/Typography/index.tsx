@@ -1,6 +1,6 @@
 export function CardTitle(props: any) {
   return (
-    <h2 className="text-5xl font-semibold text-white">{props.children}</h2>
+    <h2 className="text-5xl font-semibold text-white z-2">{props.children}</h2>
   );
 }
 
