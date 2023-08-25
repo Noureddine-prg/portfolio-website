@@ -17,7 +17,7 @@ export default function LandingCard(props: ILandingCard) {
       className={`${props.customColor} lg:${props.width} p-4 rounded-3xl flex flex-col relative`}
       href={`${props.pageRoute}`}
     >
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px]">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80px] h-[80px]">
         <img src={props.icon} alt="Icon" className="" />
       </div>
 
