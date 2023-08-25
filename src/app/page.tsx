@@ -5,28 +5,31 @@ export default function Home() {
   return (
     <div className=" flex justify-center w-screen h-screen p-8 bg-[#E9F6FC]">
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen">
-        <GreetingCard />
+        <GreetingCard bigPicture="/japanBG.png" userIcon="/sky.png" />
 
         {/* About Card */}
         <LandingCard
-          customColor="#054244"
+          customColor="bg-[#054244]"
           pageRoute="/about"
           cardText="About"
+          icon="/Icons/person.svg"
         />
 
         {/* Portfolio Card */}
         <LandingCard
-          customColor="#2568E9"
+          customColor="bg-[#2568E9] "
           pageRoute="/portfolio"
-          width="col-span-2"
           cardText="Portfolio"
+          width="col-span-2"
+          icon="/Icons/journals.svg"
         />
 
         {/* Contact Card */}
         <LandingCard
-          customColor="#F24D31"
+          customColor="bg-[#F24D31]"
           pageRoute="/contact"
           cardText="Contact"
+          icon="/Icons/telephone.png"
         />
       </div>
     </div>

@@ -1,9 +1,4 @@
-import {
-  Details,
-  CardTitle,
-  BodyText,
-} from "@components/components/Typography";
-
+import { CardTitle } from "@components/components/Typography";
 import Line from "@widgets/widgets/horizontalLine";
 import Link from "next/link";
 
@@ -19,10 +14,14 @@ interface ILandingCard {
 export default function LandingCard(props: ILandingCard) {
   return (
     <Link
-      className={`bg-[${props.customColor}] lg:${props.width} p-4 rounded-3xl flex flex-col hover:opacity-75`}
+      className={`${props.customColor} lg:${props.width} p-4 rounded-3xl flex flex-col relative`}
       href={`${props.pageRoute}`}
     >
-      <div className="mt-auto pb-14">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120px] h-[120px]">
+        <img src={props.icon} alt="Icon" className="" />
+      </div>
+
+      <div className="mt-auto pb-10">
         <CardTitle>{props.cardText}</CardTitle>
         <Line />
       </div>
