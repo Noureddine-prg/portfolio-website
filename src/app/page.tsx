@@ -1,9 +1,3 @@
-import {
-  Details,
-  CardTitle,
-  BodyText,
-} from "@components/components/Typography";
-
 import LandingCard from "@components/components/LandingCards/landingCard";
 import GreetingCard from "@components/components/LandingCards/greetingCard";
 
@@ -14,18 +8,26 @@ export default function Home() {
         <GreetingCard />
 
         {/* About Card */}
-        <LandingCard color="#054244" pageRoute="/about" cardText="About" />
+        <LandingCard
+          customColor="#054244"
+          pageRoute="/about"
+          cardText="About"
+        />
 
         {/* Portfolio Card */}
         <LandingCard
-          color="#2568E9"
+          customColor="#2568E9"
           pageRoute="/portfolio"
           width="col-span-2"
           cardText="Portfolio"
         />
 
         {/* Contact Card */}
-        <LandingCard color="#F2D22C" pageRoute="/contact" cardText="Contact" />
+        <LandingCard
+          customColor="#F24D31"
+          pageRoute="/contact"
+          cardText="Contact"
+        />
       </div>
     </div>
   );
