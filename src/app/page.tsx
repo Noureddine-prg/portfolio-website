@@ -13,15 +13,17 @@ export default function Home() {
           pageRoute="/about"
           cardText="About"
           icon="/Icons/person.svg"
+          hiddenText="Professional Background and Skillset"
         />
 
         {/* Portfolio Card */}
         <LandingCard
-          customColor="bg-[#2568E9] "
+          customColor="bg-[#2568E9]"
           pageRoute="/portfolio"
           cardText="Portfolio"
           width="col-span-2"
           icon="/Icons/journals.svg"
+          hiddenText="Come check out what I've done!"
         />
 
         {/* Contact Card */}
@@ -30,6 +32,7 @@ export default function Home() {
           pageRoute="/contact"
           cardText="Contact"
           icon="/Icons/telephone.png"
+          hiddenText="Let's get in touch."
         />
       </div>
     </div>
