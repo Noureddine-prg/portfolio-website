@@ -7,13 +7,16 @@ import {
 interface IGreetingCard {
   bigPicture: string;
   userIcon: string;
+  customColor: string;
 }
 
 export default function GreetingCard(props: IGreetingCard) {
   return (
     <>
       {/* Intro Card */}
-      <div className="lg:col-span-2 bg-white rounded-3xl p-10 flex lg:flex-row flex-col-reverse lg:justify-end">
+      <div
+        className={`lg:col-span-2 ${props.customColor} rounded-3xl p-10 flex lg:flex-row flex-col-reverse lg:justify-end`}
+      >
         {/* Left Content Container */}
         <div className="w-full lg:w-1/2 h-full pr-11 flex flex-col">
           <div className="flex flex-row items-center justify-center lg:justify-start">
@@ -33,7 +36,7 @@ export default function GreetingCard(props: IGreetingCard) {
             <Details>
               Full-Stack Software Developer based in Brooklyn, New York
             </Details>
-            <div className="h-1 w-full bg-black mt-5 flex" />;
+            <div className="h-1 w-full bg-black mt-5 flex" />
           </div>
         </div>
 
