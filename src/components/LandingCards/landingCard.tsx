@@ -32,8 +32,8 @@ export default function LandingCard(props: ILandingCard) {
     },
     expanded: {
       opacity: 1,
-      width: "100vw",
-      height: "100vh",
+      width: "100%",
+      height: "100%",
     },
   };
 
@@ -55,22 +55,18 @@ export default function LandingCard(props: ILandingCard) {
     "group",
     props.customColor,
     "shadow-custom",
-    `lg:${props.width}`,
-    "p-4",
     "rounded-3xl",
     "flex",
     "flex-col",
-    "relative",
     "transition-transform",
     "transform",
-    "duration-100",
     "z-1",
+    "transition-all",
+    "duration-500",
     props.cardsFadedOut && props.activeCard !== props.cardText
       ? "opacity-0"
       : "",
-    isCardActive
-      ? "w-screen h-screen transition-all duration-100 absolute top-0 left-0"
-      : "",
+    isCardActive ? "absolute right-0 bottom-0" : `lg:${props.width} p-4`,
   ].join(" ");
 
   const iconClasses = [
@@ -111,7 +107,7 @@ export default function LandingCard(props: ILandingCard) {
         <motion.div
           initial={{ opacity: 1 }}
           animate={isCardActive ? { opacity: 0 } : { opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
         >
           <Line />
         </motion.div>

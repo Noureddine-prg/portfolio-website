@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface UseCardAnimationReturn {
   clicked: boolean;
@@ -14,6 +15,7 @@ const useCardAnimation = (): UseCardAnimationReturn => {
   const [cardsFadedOut, setCardsFadedOut] = useState<boolean>(false);
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const [expandCard, setExpandCard] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleCardClick = async (cardName: string, route: string) => {
     if (!clicked) {
@@ -29,10 +31,8 @@ const useCardAnimation = (): UseCardAnimationReturn => {
 
       //Timer before going to selected page
       setTimeout(() => {
-        window.location.href = route;
-      }, 5000);
-
-      window.location.href = route;
+        router.push(route);
+      }, 1000);
     }
   };
 
