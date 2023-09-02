@@ -5,22 +5,18 @@ import GreetingCard from "@components/components/LandingCards/greetingCard";
 import useCardAnimation from "../hooks/useCardAnimation";
 
 export default function Home() {
-  const { clicked, cardsFadedOut, activeCard, handleCardClick } =
+  const { clicked, cardsFadedOut, activeCard, handleCardClick, expandCard } =
     useCardAnimation();
 
   return (
     <div className=" flex justify-center w-screen h-screen p-8 bg-[#E9F6FC]">
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen relative">
         <GreetingCard
-          customColor={`bg-white transition-opacity duration-1000 ${
-            (cardsFadedOut && activeCard !== "About") ||
-            (cardsFadedOut && activeCard !== "Portfolio") ||
-            (cardsFadedOut && activeCard !== "Contact")
-              ? "opacity-0"
-              : ""
-          }`}
+          customColor={`bg-white`}
           bigPicture="/japanBG.png"
           userIcon="/sky.png"
+          cardsFadedOut={cardsFadedOut}
+          activeCard={activeCard}
         />
 
         {/* About Card */}
@@ -33,6 +29,7 @@ export default function Home() {
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
           handleCardClick={handleCardClick}
+          expandCard={expandCard}
         />
 
         {/* Portfolio Card */}
@@ -42,10 +39,11 @@ export default function Home() {
           cardText="Portfolio"
           width="col-span-2"
           icon="/Icons/journals.svg"
-          hiddenText="Come check out what I've done!"
+          hiddenText="Come check out what I've done"
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
           handleCardClick={handleCardClick}
+          expandCard={expandCard}
         />
 
         {/* Contact Card */}
@@ -58,6 +56,7 @@ export default function Home() {
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
           handleCardClick={handleCardClick}
+          expandCard={expandCard}
         />
       </div>
     </div>

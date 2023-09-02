@@ -1,21 +1,38 @@
+"use client";
+
 import {
   Details,
   CardTitle,
   BodyText,
 } from "@components/components/Typography";
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 interface IGreetingCard {
   bigPicture: string;
   userIcon: string;
   customColor: string;
+  cardsFadedOut: boolean;
+  activeCard: string | null;
 }
 
 export default function GreetingCard(props: IGreetingCard) {
+  const { clicked, cardsFadedOut, activeCard, handleCardClick } =
+    useCardAnimation();
+
   return (
     <>
       {/* Intro Card */}
       <div
-        className={`lg:col-span-2 ${props.customColor} rounded-3xl p-10 flex lg:flex-row flex-col-reverse lg:justify-end`}
+        className={`lg:col-span-2 
+        ${props.customColor} 
+        ${
+          (props.cardsFadedOut && props.activeCard !== "About") ||
+          (props.cardsFadedOut && props.activeCard !== "Portfolio") ||
+          (props.cardsFadedOut && props.activeCard !== "Contact")
+            ? "opacity-0"
+            : ""
+        }
+        rounded-3xl p-10 flex lg:flex-row flex-col-reverse lg:justify-end transition-opacity duration-1000 `}
       >
         {/* Left Content Container */}
         <div className="w-full lg:w-1/2 h-full pr-11 flex flex-col">
