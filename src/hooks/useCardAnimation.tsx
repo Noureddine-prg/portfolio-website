@@ -19,19 +19,22 @@ const useCardAnimation = (): UseCardAnimationReturn => {
 
   const handleCardClick = async (cardName: string, route: string) => {
     if (!clicked) {
-      //Stores clicked card
+      // Stores clicked card
       setActiveCard(cardName);
       setClicked(true);
 
-      //Other cards fade out
+      // Other cards fade out
       setCardsFadedOut(true);
 
-      //Card expands
-      setExpandCard(true);
-
-      //Timer before going to selected page
+      // Delay before card expansion
       setTimeout(() => {
-        router.push(route);
+        // Card expands
+        setExpandCard(true);
+
+        // Timer before going to selected page
+        setTimeout(() => {
+          router.push(route);
+        }, 1000);
       }, 1000);
     }
   };
