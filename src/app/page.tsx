@@ -21,7 +21,7 @@ export default function Home() {
 
         {/* About Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-[#0B628E]"
           pageRoute="/about"
           cardText="About"
           icon="/Icons/person.svg"
