@@ -1,6 +1,6 @@
 export default function Navbar(props: any) {
     return(
-        <div className=" text-white pb-6 border-b-2 border-white mb-10">
+        <div className=" text-white pb-6 border-b-2 border-white mb-20">
             <div className="container mx-auto flex justify-between items-center ">
             
                 <div className="font-semibold flex flex-row">
@@ -13,7 +13,7 @@ export default function Navbar(props: any) {
                     
                     <div className="flex flex-col">
                         <span className="text-xl">Noureddine Sidi Abed</span>
-                        <span className="text-xs text-slate-800">Full-Stack Software Developer</span>
+                        <span className="text-sm text-slate-800">Full-Stack Software Developer</span>
                     </div>
                     
                 </div>
