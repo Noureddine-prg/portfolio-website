@@ -1,17 +1,46 @@
+"use client"
+
 import Wrapper from "@components/components/Wrapper";
 import { CardTitle } from "@components/components/Typography";
 import Navbar from "@components/components/Navbar/Navbar";
+import {motion} from 'framer-motion';
 
 export default function About() {
+
+  const leftSideVariants = {
+    hidden: { opacity: 0, x: -400 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        x: { type: 'spring', stiffness: 100, damping: 10, mass: .5 },
+        opacity: { duration: 1 }
+      }
+    }
+  };
+  
+  const rightSideVariants = {
+    hidden: { opacity: 0, x: 400 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        x: { type: 'spring', stiffness: 100, damping: 10, mass: .5 },
+        opacity: { duration: 1}
+      }
+    }
+  };  
+
   return (
-    <Wrapper bgColor="bg-[#054244]">
-      
+    <Wrapper bgColor="bg-gradient-to-r from-[#054244] to-[#1C5355]">
+
       <Navbar/>
 
       {/* Bio Section */}
-      <div className="flex flex-row w-full h-screen">
+      <motion.div className="flex flex-row w-full h-screen" initial="hidden" animate="visible">
         {/* Left Side */}
-        <div className="w-1/2 flex flex-col ">
+        <motion.div className="w-1/2 flex flex-col" variants={leftSideVariants}>
+          
           <span className="font-bold text-4xl"> Hi, nice to meet you. </span>
           <span className="font-bold text-7xl"> I’m Noureddine! </span>
           <div className="text-xl">
@@ -32,9 +61,10 @@ export default function About() {
               which I believe is instrumental in today’s dynamic tech landscape.
             </h1>
           </div>
-        </div>
+        </motion.div>
+
         {/* Right Side */}
-        <div className="w-1/2 flex flex-col items-end">
+        <motion.div className="w-1/2 flex flex-col items-end" variants={rightSideVariants}>
           
           <img
             src="/me.png"
@@ -43,14 +73,37 @@ export default function About() {
             style={{
               boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
             }}            
-          />
+          />     
+        </motion.div>
 
-          
-        </div>
-      </div>
+
+      </motion.div>
 
       {/* Skill section */}
-      <div className="w-full h-full #0B628E"></div>
+      <div className="w-full h-full ">
+        {/* Left Side */}
+
+            <div className="">
+
+              <div className="">
+                <button/>
+                <img></img>
+              </div>
+              
+              <div className="">
+                <button/>
+                <img></img>
+              </div>
+
+            </div>
+        {/* Right Side */}
+            
+            <div>
+
+            </div>
+
+
+      </div>
     </Wrapper>
   );
 }

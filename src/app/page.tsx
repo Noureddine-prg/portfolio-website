@@ -13,15 +13,15 @@ export default function Home() {
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen relative">
         <GreetingCard
           customColor={`bg-white`}
-          bigPicture="/japanBG.png"
-          userIcon="/sky.png"
+          bigPicture="/landscape3.png"
+          userIcon="/landscape3.png"
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
         />
 
         {/* About Card */}
         <LandingCard
-          customColor="bg-[#054244]"
+          customColor="bg-gradient-to-r from-[#054244] to-[#1C5355]"
           pageRoute="/about"
           cardText="About"
           icon="/Icons/person.svg"

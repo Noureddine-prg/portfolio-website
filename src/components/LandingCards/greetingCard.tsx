@@ -41,7 +41,7 @@ export default function GreetingCard(props: IGreetingCard) {
             <img
               src={props.userIcon}
               alt="Main Image"
-              className="w-12 h-12 rounded-2xl object-cover object-center mr-[7px] border"
+              className="w-12 h-12 rounded-3xl object-cover object-center mr-[7px] border"
             />
             <div className="flex flex-col align-bottom">
               <Details>Noureddine Sidi Abed</Details>
