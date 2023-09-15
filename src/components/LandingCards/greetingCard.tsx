@@ -23,7 +23,7 @@ export default function GreetingCard(props: IGreetingCard) {
     <>
       {/* Intro Card */}
       <div
-        className={`lg:col-span-2 
+        className={`lg:col-span-2 border-2 border-black
         ${props.customColor} 
         ${
           (props.cardsFadedOut && props.activeCard !== "About") ||
