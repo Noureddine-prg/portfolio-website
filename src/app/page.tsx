@@ -34,7 +34,7 @@ export default function Home() {
 
         {/* Portfolio Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-gradient-to-r from-[#1E2E4C] to-[#005F87]"
           pageRoute="/portfolio"
           cardText="Portfolio"
           width="col-span-2"
@@ -48,7 +48,7 @@ export default function Home() {
 
         {/* Contact Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-gradient-to-r from-[#472331] to-[#CA6E59]"
           pageRoute="/contact"
           cardText="Contact"
           icon="/Icons/telephone.png"

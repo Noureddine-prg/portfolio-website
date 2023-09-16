@@ -20,7 +20,7 @@ export default function Navbar(props: any) {
                     <img
                     src="/landscape3.png"
                     alt="Main Image"
-                    className="w-12 h-12 rounded-3xl object-cover object-center mr-[7px] border"
+                    className="w-12 h-12 rounded-3xl object-cover object-center mr-[10px] border"
                     />
                     
                     <div className="flex flex-col">

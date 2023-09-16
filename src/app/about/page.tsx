@@ -4,6 +4,7 @@ import Wrapper from "@components/components/Wrapper";
 import { CardTitle } from "@components/components/Typography";
 import Navbar from "@components/components/Navbar/Navbar";
 import {motion} from 'framer-motion';
+import Icon from "@components/components/Icon/icon";
 
 export default function About() {
 
@@ -37,12 +38,12 @@ export default function About() {
       <Navbar/>
 
       {/* Bio Section */}
-      <motion.div className="flex flex-row w-full h-screen" initial="hidden" animate="visible">
+      <motion.div className="flex flex-row w-full h-full" initial="hidden" animate="visible">
         {/* Left Side */}
-        <motion.div className="w-1/2 flex flex-col" variants={leftSideVariants}>
+        <motion.div className="w-1/2 h-full flex flex-col" variants={leftSideVariants}>
           
           <span className="font-bold text-4xl"> Hi, nice to meet you. </span>
-          <span className="font-bold text-7xl"> I’m Noureddine! </span>
+          <span className="font-bold text-7xl pt-6"> I’m Noureddine! </span>
           <div className="text-xl">
             <h1 className=" max-w-[650px] mt-10 ">
               Throughout my time at New York City College of Technology, I explored the world
@@ -69,7 +70,7 @@ export default function About() {
           <img
             src="/me.png"
             alt="Main Image"
-            className="w-[460px] h-[550px] rounded-3xl border-2 border-white"
+            className="w-[500px] h-[650px] rounded-3xl border-2 border-white"
             style={{
               boxShadow: "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
             }}            
@@ -80,10 +81,11 @@ export default function About() {
       </motion.div>
 
       {/* Skill section */}
-      <div className="w-full h-full ">
+
+      <div className="flex flex-row w-full h-full mb-20 border-b-2 border-white">
         {/* Left Side */}
 
-            <div className="">
+            <div className="flex flex-col h-full w-1/2">
 
               <div className="">
                 <button/>
@@ -98,8 +100,48 @@ export default function About() {
             </div>
         {/* Right Side */}
             
-            <div>
+            <div className="w-1/2 h-full text-center">
+              
+              <text className="font-bold text-7xl"> Here's What I Know </text>
+              
+              <div className="my-8 text-3xl"> Languages </div>
 
+              <div className="flex flex-row justify-center space-x-6">
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+              </div>
+              
+              <div className="my-8 text-3xl"> Front-End </div>
+
+              <div className="flex flex-row justify-center space-x-6">
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+              </div>
+              
+              <div className="my-8 text-3xl"> Back-End </div>
+
+              <div className="flex flex-row justify-center space-x-6">
+                <Icon img={""}/>
+                <Icon img={""}/>
+                <Icon img={"/"}/>
+              </div>
+              
+              <div className="my-8 text-3xl">Dev Tools</div>
+              <div className="flex flex-row justify-center space-x-6">
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+                <Icon img={"/"}/>
+              </div>
             </div>
 
 
