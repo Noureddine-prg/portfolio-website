@@ -1,7 +1,7 @@
 export default function Icon(props:any){
     return(
         <img 
-            className="w-[40px] h-[40px] object first-letter: object-cover"
+            className={`w-[45px] h-[45px] object first-letter: object-fit bg-cover rounded-xl  ${props.bgColor}`}
             src={props.img}
         />
         
