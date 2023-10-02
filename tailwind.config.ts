@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "about" : "var(--about)",
+        "portfolio":  "var(--portfolio)",
+        "contact": "var(--contact)",
+        "wrapper": "var(--wrapper)"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

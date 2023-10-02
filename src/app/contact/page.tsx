@@ -5,7 +5,7 @@ import Wrapper from '@components/components/Wrapper';
 
 export default function Contact() {
   return(
-  <Wrapper bgColor="bg-gradient-to-r from-[#472331] to-[#CA6E59]">
+  <Wrapper bgColor="bg-[var(--contact)]">
     <Navbar />
   </Wrapper>);
 }

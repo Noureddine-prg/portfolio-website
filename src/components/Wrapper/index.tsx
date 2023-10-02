@@ -2,7 +2,7 @@
 
 export default function Wrapper(props: any) {
   return (
-    <div className="flex justify-center w-screen h-screen p-0 sm:p-8 bg-[#E9F6FC] relative">
+    <div className="flex justify-center w-screen h-screen p-0 sm:p-8 bg-[var(--wrapper)] relative">
       <style jsx>{`
         .hide-scrollbar {
           -ms-overflow-style: none;
