@@ -7,21 +7,21 @@ import useCardAnimation from "../hooks/useCardAnimation";
 export default function Home() {
   const { clicked, cardsFadedOut, activeCard, handleCardClick, expandCard } =
     useCardAnimation();
-
+    
   return (
-    <div className=" flex justify-center w-screen h-screen p-8 bg-[#E9F6FC]">
+    <div className=" flex justify-center w-screen h-screen p-8 bg-[var(--wrapper)]">
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen relative">
         <GreetingCard
           customColor={`bg-white`}
-          bigPicture="/japanBG.png"
-          userIcon="/sky.png"
+          bigPicture="/landscape3.png"
+          userIcon="/landscape3.png"
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
         />
 
         {/* About Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-[var(--about)]"
           pageRoute="/about"
           cardText="About"
           icon="/Icons/person.svg"
@@ -34,7 +34,7 @@ export default function Home() {
 
         {/* Portfolio Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-[var(--portfolio)]"
           pageRoute="/portfolio"
           cardText="Portfolio"
           width="col-span-2"
@@ -48,11 +48,11 @@ export default function Home() {
 
         {/* Contact Card */}
         <LandingCard
-          customColor="bg-[#9C1B20]"
+          customColor="bg-[var(--contact)]"
           pageRoute="/contact"
           cardText="Contact"
           icon="/Icons/telephone.png"
-          hiddenText="Let's get in touch."
+          hiddenText="Let's get in touch"
           cardsFadedOut={cardsFadedOut}
           activeCard={activeCard}
           handleCardClick={handleCardClick}

@@ -63,6 +63,8 @@ export default function LandingCard(props: ILandingCard) {
     "z-1",
     "transition-all",
     "duration-500",
+    "border-2",
+    "border-black",
     props.cardsFadedOut && props.activeCard !== props.cardText
       ? "opacity-0"
       : "",
