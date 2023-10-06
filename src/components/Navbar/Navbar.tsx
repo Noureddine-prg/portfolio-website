@@ -8,7 +8,7 @@ export default function Navbar(props: any) {
 
   return (
     <motion.div
-      className=" text-white pb-6 border-b-2 border-white mb-20"
+      className=" text-white pb-6 border-b-2 border-white mb-12"
       initial="hidden"
       animate="visible"
       variants={fadeIn}

@@ -1,7 +1,6 @@
 "use client";
 
 import Wrapper from "@components/components/Wrapper";
-import Navbar from "@components/components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import Icon from "@components/components/Icon/icon";
 
@@ -13,14 +12,11 @@ export default function About() {
 
   return (
     <Wrapper bgColor="bg-[var(--about)]">
-      <Navbar />
-
       <motion.div
-        className="flex flex-col md:flex-row w-full h-3/4"
+        className="flex flex-col md:flex-row w-full h-2.5/5"
         initial="hidden"
         animate="visible"
       >
-        {/* Left Side */}
         <motion.div
           className="w-full md:w-1/2 h-full flex flex-col"
           variants={fadeIn}
@@ -48,9 +44,8 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Right Side */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col items-center md:items-end"
+          className="w-full h-2/5 md:w-1/2 flex flex-col items-end"
           variants={fadeIn}
         >
           <img
@@ -66,40 +61,33 @@ export default function About() {
       </motion.div>
 
       {/* Skill section */}
-
-      <div className="flex flex-col md:flex-row mt-40 w-full h-full mb-20 border-b-2 border-white">
+      <div className="flex flex-col md:flex-row mt-40 w-full h-2/5 border-white">
         {/* Right Side */}
 
-        <div className="w-1/2 h-full"></div>
+        <div className="w-1/2"></div>
 
         {/* Right Side */}
 
-        <div className="w-1/2 h-full text-center">
-          <text className="font-bold text-4xl md:text-5xl text-center">
-            {" "}
-            Skills{" "}
-          </text>
+        <div className="w-1/2 text-center">
+          <text className="font-bold text-4xl md:text-5xl "> Skills </text>
 
-          <div className="grid grid-cols-4 gap-y-4 mt-10 mx-28">
-            <Icon language="Python" img={"/Icons/Python.png"} />
-            <Icon language="C++" img={"/Icons/C++.png"} />
-            <Icon language="C" img={"/Icons/C.png"} />
+          <div className="grid grid-cols-4 gap-y-5 mt-10 mx-32 items-center justify-items-center auto">
             <Icon language="React" img={"/Icons/React.png"} />
             <Icon language="Typescript" img={"/Icons/TypeScript.png"} />
             <Icon language="Javascript" img={"/Icons/JavaScript.png"} />
+            <Icon language="Java" img={"/Icons/Java.png"} />
+            <Icon language="Python" img={"/Icons/Python.png"} />
+            <Icon language="C++" img={"/Icons/C++.png"} />
+            <Icon language="Flutter" img={"/Icons/Flutter.png"} />
             <Icon language="HTML" img={"/Icons/Html.png"} />
             <Icon language="CSS" img={"/Icons/Css.png"} />
-            <Icon language="Flutter" img={"/Icons/Flutter.png"} />
-            <Icon language="Java" img={"/Icons/Java.png"} />
             <Icon
               language="MySQL"
               img={"/Icons/MySql.png"}
               bgColor={"bg-white"}
             />
             <Icon language="Next.js" img={"/Icons/Nextjs.png"} />
-            <Icon language="Visual Studio" img={"/Icons/Visual.png"} />
             <Icon language="Git" img={"/Icons/Git.png"} />
-            <Icon language="VSCode" img={"/Icons/VsCode.png"} />
           </div>
         </div>
       </div>
