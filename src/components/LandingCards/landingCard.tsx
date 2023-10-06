@@ -45,7 +45,6 @@ export default function LandingCard(props: ILandingCard) {
 
   const hiddenTextVariants = {
     initial: { opacity: 0, maxHeight: 0 },
-    expanded: { opacity: 0, maxHeight: 0 },
     hovered: { opacity: 1, maxHeight: "100px" },
   };
 
@@ -54,6 +53,7 @@ export default function LandingCard(props: ILandingCard) {
   const cardClasses = [
     "group",
     props.customColor,
+    "origin-top",
     "shadow-custom",
     "rounded-3xl",
     "flex",
@@ -91,6 +91,10 @@ export default function LandingCard(props: ILandingCard) {
       className={cardClasses}
       onClick={() => props.handleCardClick(props.cardText, props.pageRoute)}
       variants={cardVariants}
+      style={{
+        boxShadow:
+          "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
+      }}
     >
       <motion.div className={iconClasses} variants={iconVariants}>
         <img src={props.icon} alt="Icon" />
