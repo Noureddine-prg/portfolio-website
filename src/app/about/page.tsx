@@ -77,45 +77,27 @@ export default function About() {
       {/* Right Side */}
           
       <div className="w-1/2 h-full text-center">
-          
-          <text className="font-bold text-4xl md:text-5xl"> Skills </text>
-          
-                
-                <div className="my-8 text-3xl"> Languages </div>
-
-                <div className="flex flex-row justify-center space-x-6">
+                <text className="font-bold text-4xl md:text-5xl text-center"> Skills </text>
+              
+                <div className="grid grid-cols-4 gap-y-4 mt-10 mx-28">
                   <Icon language="Python" img={"/Icons/Python.png"}/>
                   <Icon language="C++" img={"/Icons/C++.png"}/>
                   <Icon language="C" img={"/Icons/C.png"}/>
-                  <Icon language="PHP" img={"/Icons/Php.png"}/>
-                </div>
-                
-                <div className="my-8 text-3xl"> Front-End </div>
 
-                <div className="flex flex-row justify-center space-x-6">
                   <Icon language="React" img={"/Icons/React.png"}/>
                   <Icon language="Typescript" img={"/Icons/TypeScript.png"}/>
                   <Icon language="Javascript" img={"/Icons/JavaScript.png"}/>
                   <Icon language="HTML" img={"/Icons/Html.png"}/>
                   <Icon language="CSS" img={"/Icons/Css.png"}/>
-                  <Icon language="Sass" img={"/Icons/Sass.png"}/>
                   <Icon language="Flutter" img={"/Icons/Flutter.png"}/>
-                </div>
-                
-                <div className="my-8 text-3xl"> Back-End </div>
 
-                <div className="flex flex-row justify-center space-x-6">
                   <Icon language="Java" img={"/Icons/Java.png"}/>
                   <Icon language="MySQL" img={"/Icons/MySql.png"} bgColor={"bg-white"}/>
                   <Icon language="Next.js" img={"/Icons/Nextjs.png"}/>
-                </div>
-                
-                <div className="my-8 text-3xl">Dev Tools</div>
-                <div className="flex flex-row justify-center space-x-6">
+
                   <Icon language="Visual Studio" img={"/Icons/Visual.png"}/>
                   <Icon language="Git" img={"/Icons/Git.png"}/>
                   <Icon language="VSCode" img={"/Icons/VsCode.png"}/>
-                  <Icon language="Docker" img={"/Icons/Docker.png"}/>
                 </div>
       </div>
 
