@@ -69,7 +69,7 @@ export default function About() {
         {/* Right Side */}
 
         <div className="w-1/2 text-center">
-          <text className="font-bold text-4xl md:text-5xl "> Skills </text>
+          <text className="font-bold text-4xl md:text-5xl"> Skills </text>
 
           <div className="grid grid-cols-4 gap-y-5 mt-10 mx-32 items-center justify-items-center auto">
             <Icon language="React" img={"/Icons/React.png"} />

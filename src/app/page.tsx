@@ -5,9 +5,9 @@ import GreetingCard from "@components/components/LandingCards/greetingCard";
 import useCardAnimation from "../hooks/useCardAnimation";
 
 export default function Home() {
-  const { clicked, cardsFadedOut, activeCard, handleCardClick, expandCard } =
+  const { cardsFadedOut, activeCard, handleCardClick, expandCard } =
     useCardAnimation();
-    
+
   return (
     <div className=" flex justify-center w-screen h-screen p-8 bg-[var(--wrapper)]">
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-9 w-full h-full auto-rows-fr max-h-screen relative">
